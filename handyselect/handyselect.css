@@ -1,0 +1,21 @@
+
+
+.handySelect { position: relative; display: inline; }
+.handySelect-selector { font-size: 12px; color: blue; border-bottom: 1px dotted blue; display: inline; cursor: pointer; }
+
+.handySelect-popup { background-color: #ffffff; display: block; position: absolute;  left: 0; top: 20px; width: auto; border: 1px solid #dddddd; }
+
+.handySelect-options, .handySelect-options li { list-style: none; list-style-image: none; padding: 0; margin: 0; }
+.handySelect-options li { padding: 5px; width: auto; white-space: nowrap; cursor: pointer; }
+.handySelect-multiple ul li ins { display: block; float: left; width: 12px; height: 12px; outline: 1px solid black; }
+.handySelect-multiple ul li.handySelect-option-selected ins { background-color: #888888; }
+.handySelect-multiple .handySelect-label { display: block; margin-left: 20px; }
+
+.handySelect-option-any { display: block; padding: 10px; border-bottom: 1px solid #cccccc; cursor: pointer; }
+.handySelect-controls { display: block; padding: 10px; border-top: 1px solid #cccccc; cursor: default!important; text-align: center; }
+.handySelect-controls-ok { color: blue; border-bottom: 1px dotted blue; cursor: pointer; }
+
+.handySelect-option-selected { background-color: #efefef; }
+.handySelect-option-hover { background-color: #f5f5f5; }
+
+
