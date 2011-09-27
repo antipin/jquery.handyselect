@@ -2,14 +2,14 @@
 
   $(document).ready(function(){
     
-    $('#handySelect-1').handySelect({
+    $('#handyselect-1').handyselect({
       selectedOptionsToDisplay: 'all',
       onChange: function(value){
         console.log(value)
       }
     });
     
-    $('#handySelect-2').handySelect({
+    $('#handyselect-2').handyselect({
       selectedOptionsToDisplay: 2,
       selectorMode: 'count',
       onChange: function(value){
@@ -17,14 +17,14 @@
       }
     });
     
-    $('#handySelect-3').handySelect({
+    $('#handyselect-3').handyselect({
       selectedOptionsToDisplay: 3,
       onChange: function(value){
         console.log(value)
       }
     });
     
-    $('#handySelect-inline').handySelect({
+    $('#handyselect-inline').handyselect({
       onChange: function(value){
         console.log(value)
       }

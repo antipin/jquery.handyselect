@@ -10,7 +10,7 @@
   /**
    * Singlton object to handle document click event
    */
-  $.handySelectSinglton = {
+  $.handyselectSinglton = {
     
     isDocumentClickAttached: false,
     
@@ -33,7 +33,7 @@
             if (currentDepth > maxDeepth) {
               return;
             }
-            if ($(this).hasClass('handySelect')) {
+            if ($(this).hasClass('handyselect')) {
               targetIsPopup = true;
               return;
             }
@@ -59,7 +59,7 @@
   
   
   
-  $.fn.handySelect = function(givenOptions) {
+  $.fn.handyselect = function(givenOptions) {
       
       classHandySelect = function($select, o) {
         
@@ -68,7 +68,7 @@
         // Popup state (open/closed)
         var isPopupShowed = false;
         // DOM element pointers
-        var $handySelect = null;
+        var $handyselect = null;
         var $selector = null;
         var $popup = null;
         var $optionsWrapper = null;
@@ -144,9 +144,9 @@
               options.selected.push(clickedValue);
               
               // Add selection to newly selected option
-              options.all[clickedValue].element.addClass('handySelect-option-selected');
+              options.all[clickedValue].element.addClass('handyselect-option-selected');
               // Remove selection from current selected option
-              options.all[currentValue].element.removeClass('handySelect-option-selected');
+              options.all[currentValue].element.removeClass('handyselect-option-selected');
               
             }
             
@@ -169,7 +169,7 @@
               options.selected.push(clickedValue);
               
               // Add selection to newly selected option
-              options.all[clickedValue].element.addClass('handySelect-option-selected');
+              options.all[clickedValue].element.addClass('handyselect-option-selected');
               
             }
 
@@ -186,7 +186,7 @@
               }
               
               // Remove selection from unselected option
-              options.all[clickedValue].element.removeClass('handySelect-option-selected');
+              options.all[clickedValue].element.removeClass('handyselect-option-selected');
               
             }
           }
@@ -202,7 +202,7 @@
           
           
           /**
-           * Update everything after changing state of handySelect
+           * Update everything after changing state of handyselect
            *   - Setting Selector content
            *   - Sync with hidden select element
            */
@@ -281,7 +281,7 @@
               // Create label
               var optionLabel = document.createElement('span');
               var $optionLabel = $(optionLabel);
-              $optionLabel.addClass('handySelect-label');
+              $optionLabel.addClass('handyselect-label');
               $optionLabel.html(current.label);
               
               // Create icon
@@ -328,12 +328,12 @@
             $optionsWrapper.width(optionSize.width);
             
             // Set default states for elements
-            //$popup.css({ top: $handySelect.outerHeight() });
+            //$popup.css({ top: $handyselect.outerHeight() });
             $popup.hide();
             
             // Get options DOM elements
-            $options = $('.handySelect-options li', $handySelect)
-              .not('.handySelect-option-ignore');
+            $options = $('.handyselect-options li', $handyselect)
+              .not('.handyselect-option-ignore');
             
             // Attach event handlers on DOM elements
             $selector.click(function() {
@@ -345,16 +345,16 @@
               optionClickHandler($(this));
             })
             .mouseover(function() {
-              $(this).addClass('handySelect-option-hover');
+              $(this).addClass('handyselect-option-hover');
             })
             .mouseout(function() {
-              $(this).removeClass('handySelect-option-hover');
+              $(this).removeClass('handyselect-option-hover');
             });
             
             // Add selection to selected classes
             for (var i = 0; i < options.selected.length; i++) {
               var selectedIndex = options.selected[i];
-              options.all[selectedIndex].element.addClass('handySelect-option-selected');
+              options.all[selectedIndex].element.addClass('handyselect-option-selected');
             }
             
             update();
@@ -401,7 +401,7 @@
               // Remove option value from array of selected items
               for (var i = 0; i < options.selected.length; i++) {
                 // Remove css selection from unselected option
-                options.all[options.selected[i]].element.removeClass('handySelect-option-selected');
+                options.all[options.selected[i]].element.removeClass('handyselect-option-selected');
               }
               // Remove value from array of selected items
               options.selected = [];
@@ -425,7 +425,7 @@
          * Synchronization of hidden select element to handy select
          *
          * TODO:
-         * Implement forward synchronization: from original select to handySelect
+         * Implement forward synchronization: from original select to handyselect
          * in order to process properly programmatiaclly value changing of original select element
          */
         var syncOriginalToHandySelect = function() {
@@ -482,22 +482,22 @@
           else {
             
             // If something elese opend - close it
-            if ($.handySelectSinglton.activeHandySelect != null) {
-              $.handySelectSinglton.activeHandySelect.togglePopup({forceHide: true});
-              $.handySelectSinglton.activeHandySelect = null;
+            if ($.handyselectSinglton.activeHandySelect != null) {
+              $.handyselectSinglton.activeHandySelect.togglePopup({forceHide: true});
+              $.handyselectSinglton.activeHandySelect = null;
             }
             
             $popup.css({top: selectorHeight + 'px'})
             $popup.show();
             isPopupShowed = true;
             
-            $.handySelectSinglton.activeHandySelect = self;
+            $.handyselectSinglton.activeHandySelect = self;
           }
         }
         
         
         /**
-         *  It wraps select, hide it and build handySelect
+         *  It wraps select, hide it and build handyselect
          */
         this.buildHandySelect = function() {
           
@@ -505,30 +505,30 @@
           $select.hide();
           
           // Wrap original selec element
-          $select.wrap('<span class="handySelect" id="' + o.id + '"/>');
+          $select.wrap('<span class="handyselect" id="' + o.id + '"/>');
           // Get wrapper DOM element
-          $handySelect = $select.parent();
-          if (o.multiple) $handySelect.addClass('handySelect-multiple');
+          $handyselect = $select.parent();
+          if (o.multiple) $handyselect.addClass('handyselect-multiple');
           // Create selected options placeholder (SPAN)
           var selector = document.createElement('span');
           // Convert DOM element into jQuery religion
           $selector = $(selector);
-          $selector.addClass('handySelect-selector');
-          // Append DOM element to handySelect wrapper
-          $handySelect.append($selector);
+          $selector.addClass('handyselect-selector');
+          // Append DOM element to handyselect wrapper
+          $handyselect.append($selector);
           // Create popup (UL)
           var popup = document.createElement('div');
           // Convert DOM element into jQuery religion
           $popup = $(popup);
-          $popup.addClass('handySelect-popup');
-          $handySelect.append($popup);
+          $popup.addClass('handyselect-popup');
+          $handyselect.append($popup);
           
           // Create options wrapper (UL)
           var optionsWrapper = document.createElement('ul');
           // Convert DOM element into jQuery religion
           $optionsWrapper = $(optionsWrapper);
-          $optionsWrapper.addClass('handySelect-options');
-          // Append DOM element to handySelect wrapper
+          $optionsWrapper.addClass('handyselect-options');
+          // Append DOM element to handyselect wrapper
           $popup.append($optionsWrapper);
           
           options.build();
@@ -539,19 +539,19 @@
             // Prepend any option
             var optionAny = document.createElement('span');
             $optionAny = $(optionAny);
-            $optionAny.addClass('handySelect-option-any');
-            $optionAny.addClass('handySelect-option-ignore');
+            $optionAny.addClass('handyselect-option-any');
+            $optionAny.addClass('handyselect-option-ignore');
             $optionAny.html(o.labelAnySelected);
             $popup.prepend($optionAny);
             
             // Append controls
             var controls = document.createElement('span');
             $controls = $(controls);
-            $controls.addClass('handySelect-controls');
-            $controls.addClass('handySelect-option-ignore');
+            $controls.addClass('handyselect-controls');
+            $controls.addClass('handyselect-option-ignore');
             var controlsOk = document.createElement('span');
             $controlsOk = $(controlsOk);
-            $controlsOk.addClass('handySelect-controls-ok');
+            $controlsOk.addClass('handyselect-controls-ok');
             $controlsOk.html(o.labelControlsOK);
             $controls.append($controlsOk);
             $popup.append($controls);
@@ -582,7 +582,7 @@
         // init Options class
         var options = new classOptions(self);
         
-        // It wraps select, hide it and build handySelect
+        // It wraps select, hide it and build handyselect
         this.buildHandySelect();
         
       }
@@ -591,7 +591,7 @@
       /**
        * Init document click handler
        */
-      $.handySelectSinglton.init();
+      $.handyselectSinglton.init();
       
       
       /**
@@ -626,8 +626,8 @@
         o.selectorMode = o.selectorMode || 'options';
         o.selectedOptionsToDisplay = (o.selectedOptionsToDisplay == 'all') ? 9999 : Math.abs(o.selectedOptionsToDisplay);
         
-        // Init handySelect class
-        var handySelect = new classHandySelect($this, o);
+        // Init handyselect class
+        var handyselect = new classHandySelect($this, o);
         
       });
       

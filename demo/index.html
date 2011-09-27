@@ -1,22 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<!-- coded by labs42.com -->
+<!-- coded by Alex Antipin (labs42.com) -->
   
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
+<html lang="ru-RU">
 
   <head>
     
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+    <title>Handy select demo page</title>
+
+    <meta charset="UTF-8">
     
-    <title>handySelect</title>
+    <link rel="stylesheet" media="all" href="css/page.css" />
+    <link rel="stylesheet" media="all" href="../handyselect/handyselect.css" />
     
-    <link type="text/css" rel="stylesheet" media="all" href="css/page.css" />
-    <link type="text/css" rel="stylesheet" media="all" href="../handyselect/handyselect.css" />
-    
-    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript" src="../handyselect/handyselect.jquery.js"></script> 
-    <script type="text/javascript" src="js/init.js"></script> 
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="../handyselect/handyselect.jquery.js"></script> 
+    <script src="js/init.js"></script> 
     
     
   </head>
@@ -25,81 +24,79 @@
 
     <div id="page">
       
-      <!--
+      <div style="width: 30%; float: left; height: 50px;">
       
-      =====================
-      Атрибуты select
-      =====================
-      disabled      Блокирует доступ и изменение элемента.
-      multiple      Этот параметр позволяет одновременно выбирать сразу несколько элементов списка.
-      name          Имя элемента для отправки на сервер или обращения через скрипты.
-      
-      =====================
-      Атрибуты option
-      =====================
-      disabled
-      selected
-      value
-      
-      -->
-      
-      <div style="width: 30%; float: left; height: 350px;">
-      
-        <select id="handySelect-1" name="handySelect" size="13">
-          <option value="421">Чебурашка</option>
-          <option selected value="422">Крокодил Гена</option>
-          <option value="423">Шапокляк</option>
-          <option value="424">Крыса Лариса</option>
-        
-        </select>
-      
-      </div>
-      
-      <div style="width: 30%; float: left; height: 350px;">
-        <select id="handySelect-2" multiple name="handySelect">
-          <option selected value="Чебурашка">Чебурашка</option>
-          <option selected value="Крокодил Гена">Крокодил Гена</option>
-          <option selected value="Шапокляк">Шапокляк</option>
-          <option value="Крыса Лариса">Крыса Лариса</option>
-          <option value="Апстракча">Апстракча</option>
-          <option value="Бормолей">Бормолей</option>
-          <option value="Карабас барабас">Карабас барабас</option>
-          <option value="Тортилла">Тортилла</option>
-          <option value="Декстер">Декстер</option>
-          <option value="Доктор Хаус">Доктор Хаус</option>
-          <option value="Хуй с горы">Хуй с горы</option>
-          <option value="Домовенок Кузя">Домовенок Кузя</option>
-          <option value="Опаньки...">Опаньки...</option>
-          <option value="Терминатор">Терминатор</option>
-          <option value="Ликвид Джоузи">Ликвид Джоузи</option>
-          <option value="Снеговик">Снеговик</option>
-          <option value="Морковка">Морковка</option>
+        <select id="handyselect-1" name="handyselect" size="13">
+          <option value="54">Anakin Skywalker</option>
+          <option value="23">Obi-Wan Kenobi</option>
+          <option value="67">R2-D2</option>
+          <option value="16" selected>C-3PO</option>
+          <option value="26">Yoda</option>
+          <option value="45">Palpatine</option>
+          <option value="32">Qui-Gon Jinn</option>
+          <option value="34">Nute Gunray</option>
+          <option value="56">PadmГ© Amidala</option>
+          <option value="75">Captain Panaka</option>
+          <option value="23">Sio Bibble</option>
+          <option value="12">Jar Jar Binks</option>
+          <option value="42">Boss Nass</option>
+          <option value="53">SabГ©</option>
         </select>
       </div>
       
-      <div style="width: 30%; float: left; height: 350px;">
-        <select id="handySelect-3" multiple name="handySelect">
-          <option selected value="Чебурашка">Чебурашка</option>
-          <option value="Крокодил Гена">Крокодил Гена</option>
-          <option value="Шапокляк">Шапокляк</option>
-          <option selected="selected" value="Крыса Лариса">Крыса Лариса</option>
+      <div style="width: 30%; float: left; height: 50px;">
+        <select id="handyselect-2" multiple name="handyselect">
+          <option value="12" selected>Bail Organa</option>
+          <option value="32">Zam Wesell</option>
+          <option value="31">Jango Fett</option>
+          <option value="32">Dexter Jettster</option>
+          <option value="43">Boba Fett</option>
+          <option value="12">Owen Lars</option>
+          <option value="23" selected>Beru</option>
+          <option value="54">Cliegg Lars</option>
+          <option value="65">Count Dooku</option>
+          <option value="76">General Grievous</option>
+          <option value="78">Chewbacca</option>
+          <option value="34">Luke Skywalker</option>
+          <option value="23" selected>Leia Organa</option>
+          <option value="41" selected>Grand Moff Tarkin</option>
+          <option value="46">Han Solo</option>
+          <option value="42">Wedge Antilles</option>
+          <option value="53">Admiral Piett</option>
+          <option value="26">Lando Calrissian</option>
+          <option value="33">Admiral Ackbar</option>
+          <option value="22">Wicket</option>
         </select>
       </div>
       
+      <div style="width: 30%; float: left; height: 50px;">
+        <select id="handyselect-3" multiple name="handyselect">
+            <option selected value="12">Darth Maul</option>
+            <option value="23">Watto</option>
+            <option value="34">Sebulba</option>
+            <option value="45">Shmi Skywalker</option>
+            <option value="56">Jabba the Hutt</option>
+            <option value="67">Bib Fortuna</option>
+            <option value="78">Chancellor Valorum</option>
+            <option value="89">Mace Windu</option>
+            <option selected="selected" value="91">Ki-Adi-Mundi</option>
+            <option value="42">Captain Typho</option>
+        </select>
+      </div>
+      
+
+
       <div style="clear:both; border-top: 1px dashed #999999; margin-top: 25px; padding: 25px 0;">
-        <h2>«Пирогенный фингер-эффект: гипотеза и теории»</h2>
-        <p>Пластичность стекает в шурф, что лишний раз подтверждает правоту Докучаева. В первом приближении бурозём стекает в дренаж, однозначно свидетельствуя о неустойчивости процесса в целом. Растрескивание усиливает глей только в отсутствие тепло- и массообмена с окружающей средой и следующими возможностями:
-        <select id="handySelect-inline" multiple name="handySelect"><option selected value="Чебурашка">Автопривод</option><option value="Крокодил Гена">Керамические втулки</option><option value="Шапокляк">ABS</option></select>.
-        Органическое вещество растягивает гончарный дренаж даже в том случае, если непосредственное наблюдение этого явления затруднительно. С учетом всех вышеизложенных обстоятельств, можно считать допустимым, что шаг смешения иссушает биокосный агрегат, что лишний раз подтверждает правоту Докучаева.</p>
+  
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu convallis odio. Quisque ut enim et odio pellentesque mollis. Nullam in porta massa. Morbi non odio dapibus libero aliquet auctor. Suspendisse ac felis purus, sit amet suscipit tellus. Nam ullamcorper quam varius est tincidunt et vestibulum felis tempus. Nunc vulputate massa sit amet sapien semper pretium. Donec non turpis justo. Morbi at urna in tortor luctus hendrerit. Nunc ultricies, libero dictum ultricies posuere, ligula felis egestas massa, ac aliquam augue diam sed velit.</p>
 
-        <p>Дождевание иссушает песчаный денситомер, вне зависимости от предсказаний теоретической модели явления. Электрод, как бы это ни казалось парадоксальным, вызывает фрактал, однозначно свидетельствуя о неустойчивости процесса в целом. Мочажина перемещает тонкодисперсный горизонт, что дает возможность использования данной методики как универсальной. Лессиваж охлаждает глей, хотя этот факт нуждается в дальнейшей тщательной экспериментальной проверке. Микростроение переносит горизонт в полном соответствии с законом Дарси. Лёсс, в первом приближении, усиливает бур, что дает возможность использования данной методики как универсальной.</p>
+        <p>Donec euismod vulputate nulla scelerisque porttitor. Aenean vel suscipit elit. Proin nec quam sem. Sed laoreet commodo tellus sit amet pharetra. In at dictum elit. Nam adipiscing lorem eu leo ornare rhoncus. Sed rutrum, nulla <select id="handyselect-inline" multiple name="handyselect"><option selected value="1">hendrerit</option><option value="2">convallis<option selected value="3">aliquam</option><option value="5">tortor</option></select> suscipit rhoncus accumsan, dolor turpis cursus risus, mattis venenatis ligula dui sollicitudin dolor. Maecenas massa lorem, eleifend aliquet fermentum non, rhoncus eu nisi. Aliquam dictum congue mauris, eu imperdiet ligula commodo id. Nam rutrum arcu at lorem pulvinar sodales. Sed laoreet diam quis nunc hendrerit rutrum mollis dui facilisis. Nam gravida mollis est sit amet semper. Nam adipiscing lacus libero.</p>
 
-        <p>Вскипание с HCl, согласно традиционным представлениям, растягивает тонкодисперсный гумус, все дальнейшее далеко выходит за рамки текущего исследования и не будет здесь рассматриваться. Переувлажнение ускоряет ташет при любом их взаимном расположении. Оглеение химически иссушает гончарный дренаж даже в том случае, если непосредственное наблюдение этого явления затруднительно. Не ставя под сомнение возможность разных подходов к почве, кора выветривания отражает процесс одинаково по всем направлениям. В условиях очагового земледелия свойство качественно нейтрализует песчаный уровень грунтовых вод, что лишний раз подтверждает правоту Докучаева.</p>
+        <p>Vivamus eget justo ac nibh posuere molestie. Morbi justo magna, bibendum vitae hendrerit eu, egestas vel dolor. Vivamus viverra ipsum vitae ante sagittis adipiscing lobortis nisi convallis. Sed venenatis odio sollicitudin libero aliquet in porttitor justo consectetur. Etiam vel eros justo. Curabitur id urna odio. Fusce libero arcu, adipiscing ut pretium nec, rutrum id eros. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare elit id magna tempus fringilla. Quisque porttitor imperdiet tellus eget mollis. In vestibulum scelerisque augue rhoncus dictum. Sed nisl odio, tempus vel blandit nec, commodo eleifend ipsum. Donec vitae purus arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      
       </div>
       
     </div>
-    
-    <!--<div id="console"></div>-->
     
   </body>
 
